@@ -23,5 +23,14 @@ export default {
   },
   editItem({ commit }, { index, item }) {
     commit('EDIT_ITEM', { index, item })
+  },
+  answerQuestion({ commit, state }, option) {
+    if (option === state.questions[state.currentQuestionIndex].answer) {
+      commit('incrementScore')
+    }
+    commit('nextQuestion')
+  },
+  resetQuiz({ commit }) {
+    commit('resetQuiz')
   }
 }

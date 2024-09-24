@@ -29,5 +29,15 @@ export default {
   },
   EDIT_ITEM(state, { index, item }) {
     state.items[index] = item
+  },
+  incrementScore(state) {
+    state.score++
+  },
+  nextQuestion(state) {
+    state.currentQuestionIndex++
+  },
+  resetQuiz(state) {
+    state.currentQuestionIndex = 0
+    state.score = 0
   }
 }

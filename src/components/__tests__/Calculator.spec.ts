@@ -1,6 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
 import CalculatorView from '../../views/CalculatorView.vue'
 import { createStore } from 'vuex'
+
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 
 describe('CalculatorView.vue', () => {
